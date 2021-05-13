@@ -1,0 +1,169 @@
+@charset 'utf-8';
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul,
+li {
+  list-style: none;
+}
+header {
+  height: 48px;
+  width: 100%;
+  background-color: #0000000d;
+}
+header > .header-c {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+header > .header-c > .logo {
+  height: 24px;
+  width: 108px;
+}
+.center > .til {
+  font-size: 32px;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.center > .log {
+  height: 273px;
+  width: 841px;
+  margin: auto;
+}
+.center > .log > .left {
+  height: 273px;
+  width: 360px;
+  text-align: center;
+  float: left;
+}
+.center > .log > .left > .reg {
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  margin: auto;
+}
+.center > .log > .left > .reg > .reg {
+  width: 160px;
+  height: 160px;
+}
+.center > .log > .left > .del {
+  margin-top: 50px;
+  color: #838383;
+  font-size: 12px;
+}
+.center > .log > .right {
+  height: 273px;
+  width: 360px;
+  text-align: center;
+  float: left;
+}
+.center > .log > .right > form {
+  height: 273px;
+  width: 360px;
+}
+.center > .log > .right > form > table > tbody {
+  height: 273px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.center > .log > .right > form > table > tbody > tr {
+  width: 358px;
+  height: 48px;
+  margin-bottom: 25px;
+}
+.center > .log > .right > form > table > tbody > tr > td > input {
+  padding: 0 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  height: 48px;
+  line-height: 48px;
+  color: #191919;
+  width: 357px;
+  font-size: 14px;
+  border: none;
+}
+.center > .log > .right > form > table > tbody > tr > td > a {
+  color: #0064cc;
+  font-size: 16px;
+}
+.center > .log > .right > form > table > tbody > tr > td > .btn {
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: white;
+  width: 357px;
+  background: #CA141D;
+  border: none;
+  border-radius: 8px;
+}
+.center > .log > .right > form > table > tbody > tr > td > .box {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.center > .log > .right > form > table > tbody > tr > td > .box > a {
+  border-left: 1px solid #ddd;
+  color: #007dff;
+  padding: 0 15px;
+}
+.center > .tubiao {
+  padding: 30px 36px 40px;
+  text-align: center;
+  width: 360px;
+  height: 111px;
+  display: flex;
+  justify-content: space-around;
+}
+.center > .tubiao > span {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 28px 25px 0;
+  font-size: 1.5em;
+  display: block;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #f1ebeb;
+  width: 100%;
+}
+footer > .footer-c {
+  width: 960px;
+  height: 110px;
+  margin: auto;
+  overflow: hidden;
+}
+footer > .footer-c > .top {
+  width: 508px;
+  margin: 30px auto 0;
+}
+footer > .footer-c > .top > a {
+  padding: 0 10px;
+  font-size: 14px;
+}
+footer > .footer-c > .bot {
+  line-height: 12px;
+  height: 12px;
+  margin-top: 10px;
+  color: #000;
+  opacity: 0.3;
+  text-align: center;
+  font-size: 14px;
+}

@@ -1,0 +1,210 @@
+@charset 'utf-8';
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul,li{
+    list-style: none;
+}
+.display{
+    display: none;
+}
+header{
+    height: 48px;
+    width: 100%;
+    background-color: #0000000d;
+    >.header-c{
+        width: 1200px;
+        margin: auto;
+        height: 48px;
+        line-height: 48px;
+        justify-content: left;
+        >.logo{
+            height: 24px;
+            width: 108px;
+            margin-top: 12px;
+        }
+    }
+    
+}
+.center{
+    width: 1200px;
+    height: 746px;
+    margin: auto;
+    >div .lis{
+        >.left{
+            // display: none;
+            float: left;
+            margin-top: 40px;
+            width: 240px;
+            >.shouji{
+                background: rgba(0,0,0,.05);
+                padding: 16px;
+                border-radius: 8px;
+                cursor: pointer!important;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+            }
+            >.youxiang{
+                
+                padding: 16px;
+                border-radius: 8px;
+                cursor: pointer!important;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+            }
+            >div:hover{
+                background-color: rgba(0,125,255,.1);
+            }
+        }
+        >.right{
+            // display: none;
+            color: #191919;
+            float: left;
+            width: 960px;
+            // height: 788px;
+            padding: 69px 260px 38px 135px;
+            background: #fff;
+            font-size: 14px;
+                >.til{
+                    font-size: 32px;
+                    text-align: center;
+                    width: 442px;
+                }
+                >.det{
+                    width: 442px;
+                    font-size: 18px;
+                    text-align: center;
+                    margin-top: 5px;
+                    :nth-child(2){
+                        
+                        >a{
+                        color: #007dff;
+                        }
+                    }
+                
+                }
+                >form>table{
+                    margin-top: 35px;
+                    >tbody{
+                        >tr>td{
+                                width: 442px;
+                                height: 50px;
+                                
+                                >div{
+                                    padding: 0 16px;    
+                                    margin-top: 20px;
+                                    background: rgba(0, 0, 0, 0.05);
+                                    border-radius: 8px;
+                                    border: 1px solid transparent;
+                                    height: 48px;
+                                    width: 100%;
+                                    line-height: 48px;
+                                    
+                                    >.left{
+                                        
+                                        float: left;
+                                        
+                                        :nth-child(2){
+                                            border-right: 1px solid #ddd;
+                                            padding-right:16px;
+                                        }
+                                    }
+                                    >.input{
+                                        border: none;
+                                        background-color:  rgba(0, 0, 0, 0);
+                                        font-size: 14px;
+                                        height: 48px;
+                                        width: 208px;
+                                        padding-left: 24px;
+                                    }
+                                    >input{
+                                        width: 322px;
+                                        height: 100%;
+                                        background-color:  rgba(0, 0, 0, 0);
+                                        font-size: 14px;
+                                        border: none;
+                                        float: left;
+                                    }
+                                    >.yanzhengma{
+                                        width: 86px;
+                                        height: 48px;
+                                        float: right;
+                                        color: #007dff;
+                                        font-size: 14px;
+                                        padding-left: 16px;
+                                    }
+                                    
+                                    
+                                }
+                                >.register{
+                                    
+                                    border-radius: 8px;
+                                    background: #007dff;
+                                    border: 1px solid #ccc;
+                                    width: 314px;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    opacity: 0.38!important;
+                                    margin:57px auto 0;
+                                    text-align: center;
+                                    color: white;
+                                    line-height: 48px;
+                                }
+                                >.btn{
+                                    height: 48px!important;
+                                    
+                                }
+                            }
+                        
+                    }
+                }
+        }
+       
+    }
+}
+
+
+
+footer{
+    height: 110px;
+    
+    background-color: rgb(241, 235, 235);
+    width: 100%;
+    >.footer-c{
+        height: 110px;
+        width: 960px;
+        margin: auto;
+        overflow: hidden;
+        
+        >.top{
+            width: 508px;
+            margin:30px auto 0;
+            >a{
+                padding: 0 10px;
+                font-size: 14px;
+            }
+        }
+        >.bot{
+            line-height: 12px;
+            height: 12px;
+            margin-top: 10px;
+            color: #000;
+            opacity: 0.3;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}

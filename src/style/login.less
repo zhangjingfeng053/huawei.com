@@ -1,0 +1,184 @@
+@charset 'utf-8';
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul,li{
+    list-style: none;
+}
+header{
+    height: 48px;
+    width: 100%;
+    background-color: #0000000d;
+    >.header-c{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        >.logo{
+            height: 24px;
+            width: 108px;
+        }
+    }
+    
+}
+.center{
+    
+    >.til{
+        font-size: 32px;
+        padding: 100px 0 80px;
+        text-align: center;
+    }
+    >.log{
+        height: 273px;
+        width: 841px;
+        margin: auto;
+        >.left{
+            height: 273px;
+            width: 360px;
+            text-align: center;
+            float: left;
+            >.reg{
+                height: 200px;
+                width: 200px;
+                padding: 20px;
+                background-color: #f7f7f7;
+                border-radius: 8px;
+                margin: auto;
+                >.reg{
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+            >.del{
+                margin-top: 50px;
+                color: #838383;
+                font-size: 12px;
+            }
+        }
+        >.right{
+            height: 273px;
+            width: 360px;
+            text-align: center;
+            float: left;
+            >form{
+                height: 273px;
+                width: 360px;
+                >table>tbody{
+                    height: 273px;
+                    width: 360px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    >tr{
+                        width: 358px;
+                        height: 48px;
+                        margin-bottom: 25px;
+                        
+                        >td{
+                            >input{
+                                padding: 0 16px;
+                                border: none;
+                                border-radius: 8px;
+                                background: rgba(0, 0, 0, 0.05);
+                                height: 48px;
+                                line-height: 48px;
+                                font-size: 14px;
+                                color: #191919;
+                                width: 357px;
+                                font-size: 14px;
+                                border: none;
+                                }
+                            >a{
+                                color: #0064cc;
+                                font-size: 16px;
+                                
+                            }
+                            >.btn{
+                                height: 48px;
+                                line-height: 48px;
+                                font-size: 14px;
+                                color: white;
+                                width: 357px;
+                                background: #CA141D;
+                                border: none;
+                                border-radius: 8px;
+                            }
+                            >.box{
+                                font-size: 16px;
+                                
+                                
+                                margin-bottom: 0;
+                                >a{
+                                    border-left: 1px solid #ddd;
+                                    color: #007dff;padding: 0 15px;
+                                }
+                                
+                            }
+                        }
+                        
+                        }
+                    }
+                }
+            
+            
+            }
+    }
+    >.tubiao{
+        padding: 30px 36px 40px;
+        text-align: center;
+        width: 360px;
+        height: 111px;
+        display: flex;
+        justify-content: space-around;
+        >span{
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            margin: 28px 25px 0;
+            font-size: 1.5em;
+            display: block;
+        }
+    }
+    
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(241, 235, 235);
+    width: 100%;
+    >.footer-c{
+        width: 960px;
+        height: 110px;
+        margin: auto;
+        overflow: hidden;
+        >.top{
+            width: 508px;
+            margin:30px auto 0;
+            >a{
+                padding: 0 10px;
+                font-size: 14px;
+            }
+        }
+        >.bot{
+            line-height: 12px;
+            height: 12px;
+            margin-top: 10px;
+            color: #000;
+            opacity: 0.3;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}
