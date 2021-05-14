@@ -8,10 +8,10 @@
 
     include('../library/conn.php');
 
-    $phone = $_REQUEST['phone'];
+    $phoneEmail = $_REQUEST['phoneEmail'];
     $password = $_REQUEST['password'];
 
-    $select = "select * from reged where (phone='$phone' or email='$email') and password='$password'";
+    $select = "select * from reged where (phone='$phoneEmail'and password='$password') or (email='$phoneEmail' and password='$password')";
 
     $result = $mysqli->query($select);
 
@@ -29,6 +29,7 @@
         // php获得当前时间 time()
         
         setcookie('phone',$row['phone'],time()+3600*24,'/');
+        setcookie('email',$row['email'],time()+3600*24,'/');
         setcookie('isLogined','true',time()+3600*24,'/');
 
 

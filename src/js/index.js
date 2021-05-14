@@ -2,6 +2,35 @@ import { $ } from './library/jquery.js';
 import { cookie } from './library/cookie.js';
 import { querystring } from './library/qs.js';
 
+$.ajax({
+    type: "get",
+    url: "../../interface/template/getData.php",
+    dataType: "json",
+    success: function(res) {
+        // console.log(res);
+        let temp = '';
+
+        res.forEach((elm, i) => {
+            let picture = JSON.parse(elm.picture);
+            console.log(picture);
+
+            temp += `<li>
+            <div class="box" style="margin-bottom: 10px;">
+                <a href="product.html">
+                    <div class="img">
+                        <img class="lazy" data-original="../images/row5-1-2.png" alt="">
+                    </div>
+                    <div class="til">${elm.tittle}</div>
+                    <div class="del">${elm.del}</div>
+                    <div class="pri">￥${elm.price}</div>
+                </a>
+            </div>
+
+        </li>`;
+        })
+    }
+})
+
 
 $('.swap').html($('.news_li').html());
 var x = $('.news_li');
@@ -96,3 +125,8 @@ $('.slider').on('scroll', function() {
     }
 
 });
+
+// $('img.lazy').lazyload({
+//     placeholder: '../../src/images/load.gif',
+//     effect: 'fadeIn'
+// });

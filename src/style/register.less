@@ -18,8 +18,10 @@ ul,li{
 }
 .display{
     display: none;
+    background-color: ;
 }
 header{
+    
     height: 48px;
     width: 100%;
     background-color: #0000000d;
@@ -37,145 +39,187 @@ header{
     }
     
 }
+input{
+    outline: none;
+    background:rgba(0, 0, 0, 0.05);
+}
 .center{
-    width: 1200px;
-    height: 746px;
+    // overflow: visible;
+    
+    width: 100%;
     margin: auto;
-    >div .lis{
-        >.left{
-            // display: none;
-            float: left;
-            margin-top: 40px;
-            width: 240px;
-            >.shouji{
-                background: rgba(0,0,0,.05);
-                padding: 16px;
-                border-radius: 8px;
-                cursor: pointer!important;
-                font-size: 14px;
-                display: flex;
-                align-items: center;
+    overflow: hidden;
+    display: block;
+    >#list{
+        // display: block;
+        // border: 1px solid red;
+        width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        >.lis{
+            margin: auto;
+            width: 1200px;
+            // border: 1px solid red;
+            overflow: hidden;
+            >.left{
+                // display: none;
+                float: left;
+                margin-top: 40px;
+                width: 240px;
+                >.shouji{
+                    background: rgba(0,0,0,.05);
+                    padding: 16px;
+                    border-radius: 8px;
+                    cursor: pointer!important;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                }
+                >.youxiang{
+                    
+                    padding: 16px;
+                    border-radius: 8px;
+                    cursor: pointer!important;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                }
+                >div:hover{
+                    background-color: rgba(0,125,255,.1);
+                }
             }
-            >.youxiang{
-                
-                padding: 16px;
-                border-radius: 8px;
-                cursor: pointer!important;
-                font-size: 14px;
-                display: flex;
-                align-items: center;
-            }
-            >div:hover{
-                background-color: rgba(0,125,255,.1);
-            }
-        }
         >.right{
-            // display: none;
-            color: #191919;
-            float: left;
-            width: 960px;
-            // height: 788px;
-            padding: 69px 260px 38px 135px;
-            background: #fff;
-            font-size: 14px;
-                >.til{
-                    font-size: 32px;
-                    text-align: center;
-                    width: 442px;
-                }
-                >.det{
-                    width: 442px;
-                    font-size: 18px;
-                    text-align: center;
-                    margin-top: 5px;
-                    :nth-child(2){
-                        
-                        >a{
-                        color: #007dff;
+            // overflow: hidden;
+                    // display: none;
+                    color: #191919;
+                    float: right;
+                    width: 956px;
+                    // height: 788px;
+                    padding: 69px 260px 38px 135px;
+                    background: #fff;
+                    font-size: 14px;
+                        >.til{
+                            font-size: 32px;
+                            text-align: center;
+                            width: 442px;
                         }
-                    }
-                
-                }
-                >form>table{
-                    margin-top: 35px;
-                    >tbody{
-                        >tr>td{
-                                width: 442px;
-                                height: 50px;
+                        >.det{
+                            width: 442px;
+                            font-size: 18px;
+                            text-align: center;
+                            margin-top: 5px;
+                            :nth-child(2){
                                 
-                                >div{
-                                    padding: 0 16px;    
-                                    margin-top: 20px;
-                                    background: rgba(0, 0, 0, 0.05);
-                                    border-radius: 8px;
-                                    border: 1px solid transparent;
-                                    height: 48px;
-                                    width: 100%;
-                                    line-height: 48px;
-                                    
-                                    >.left{
-                                        
-                                        float: left;
-                                        
-                                        :nth-child(2){
-                                            border-right: 1px solid #ddd;
-                                            padding-right:16px;
-                                        }
-                                    }
-                                    >.input{
-                                        border: none;
-                                        background-color:  rgba(0, 0, 0, 0);
-                                        font-size: 14px;
-                                        height: 48px;
-                                        width: 208px;
-                                        padding-left: 24px;
-                                    }
-                                    >input{
-                                        width: 322px;
-                                        height: 100%;
-                                        background-color:  rgba(0, 0, 0, 0);
-                                        font-size: 14px;
-                                        border: none;
-                                        float: left;
-                                    }
-                                    >.yanzhengma{
-                                        width: 86px;
-                                        height: 48px;
-                                        float: right;
-                                        color: #007dff;
-                                        font-size: 14px;
-                                        padding-left: 16px;
-                                    }
-                                    
-                                    
-                                }
-                                >.register{
-                                    
-                                    border-radius: 8px;
-                                    background: #007dff;
-                                    border: 1px solid #ccc;
-                                    width: 314px;
-                                    font-size: 18px;
-                                    font-weight: 400;
-                                    opacity: 0.38!important;
-                                    margin:57px auto 0;
-                                    text-align: center;
-                                    color: white;
-                                    line-height: 48px;
-                                }
-                                >.btn{
-                                    height: 48px!important;
-                                    
+                                >a{
+                                color: #007dff;
                                 }
                             }
                         
-                    }
-                }
-        }
+                        }
+                        >form>table{
+                            margin-top: 35px;
+                            >tbody{
+                                >tr>td{
+                                        width: 442px;
+                                        height: 50px;
+                                        
+                                        >div{
+                                            padding: 0 16px;    
+                                            margin-top: 20px;
+                                            background: rgba(0, 0, 0, 0.05);
+                                            border-radius: 8px;
+                                            border: 1px solid transparent;
+                                            height: 48px;
+                                            width: 100%;
+                                            line-height: 48px;
+                                            
+                                            >.left{
+                                                
+                                                float: left;
+                                                
+                                                :nth-child(2){
+                                                    border-right: 1px solid #ddd;
+                                                    padding-right:16px;
+                                                }
+                                            }
+                                            >.input{
+                                                border: none;
+                                                background-color:  rgba(0, 0, 0, 0);
+                                                font-size: 14px;
+                                                height: 48px;
+                                                width: 208px;
+                                                padding-left: 24px;
+                                            }
+                                            >input{
+                                                width: 322px;
+                                                height: 100%;
+                                                background-color:  rgba(0, 0, 0, 0);
+                                                font-size: 14px;
+                                                border: none;
+                                                float: left;
+                                            }
+                                            >.yanzhengma{
+                                                width: 86px;
+                                                height: 48px;
+                                                float: right;
+                                                color: #007dff;
+                                                font-size: 14px;
+                                                padding-left: 16px;
+                                            }
+                                            
+                                            
+                                        }
+                                        >.register{
+                                            
+                                            border-radius: 8px;
+                                            background: #007dff;
+                                            border: 1px solid #ccc;
+                                            width: 314px;
+                                            font-size: 18px;
+                                            font-weight: 400;
+                                            opacity: 0.38!important;
+                                            margin:57px 64px 0;
+                                            text-align: center;
+                                            color: white;
+                                            line-height: 48px;
+                                        }
+                                        >.btn{
+                                            height: 48px!important;
+                                            
+                                        }
+                                    }
+                                
+                            }
+                        }
+         }
        
     }
+    }
 }
-
+.waring-pwd{
+    position: absolute;
+    top: -152px;
+    left: 16px;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 2px rgb(0 0 0 / 15%);
+    line-height: 1;
+}
+.waring-pwd2{
+    position: absolute;
+    top: -152px;
+    left: 16px;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 2px rgb(0 0 0 / 15%);
+    line-height: 1;
+}
 
 
 footer{

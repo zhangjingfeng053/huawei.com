@@ -29,189 +29,225 @@
     </header>
 
     <div class="center">
-        <div>
-            <ul id="list">
-                <li class="lis shouji-li">
-                    <div class="left">
-                        <div class="shouji divs">
-                            <span class="iconfont icon-shouji
+
+        <ul id="list">
+            <li class="lis shouji-li">
+                <div class="left">
+                    <div class="shouji divs">
+                        <span class="iconfont icon-shouji
                     " style="font-size: 1.4em;margin:0 8px 0 14px;"></span>
-                            <span>手机号注册</span>
-                        </div>
-                        <div class="youxiang divs">
-                            <span class="iconfont icon-youxiang
-                    " style="font-size: 1.4em;margin:0 8px 0 14px;"></span>
-                            <span>邮箱地址注册</span>
-                        </div>
+                        <span>手机号注册</span>
                     </div>
-                    <div class="right">
-                        <div class="til">华为帐号注册</div>
-                        <div class="det">
-                            <span>已有账号,&nbsp;</span>
-                            <span><a href="http://localhost/2102/huawei.com/src/html/login.html"> &nbsp;去登录></a> </span>
-                        </div>
-                        <form action="../../interface/template/reg.php" method="POST">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="row1">
-                                            <span style="float: left;">国家/地区</span>
-                                            <span class="iconfont icon-iconfontjiantou
+                    <div class="youxiang divs">
+                        <span class="iconfont icon-youxiang
+                    " style="font-size: 1.4em;margin:0 8px 0 14px;"></span>
+                        <span>邮箱地址注册</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="til">华为帐号注册</div>
+                    <div class="det">
+                        <span>已有账号,&nbsp;</span>
+                        <span><a href="http://localhost/2102/huawei.com/src/html/login.html"> &nbsp;去登录></a> </span>
+                    </div>
+                    <form action="../../interface/template/reg.php" method="POST">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="row1">
+                                        <span style="float: left;">国家/地区</span>
+                                        <span class="iconfont icon-iconfontjiantou
                     " style="float: right;"></span>
-                                            <span style="float: right;">中国</span>
+                                        <span style="float: right;">中国</span>
 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <div class="left">
+                                            <span>+86(中国)</span>
+                                            <span class="iconfont icon-iconfontjiantou"></span>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <div class="left">
-                                                <span>+86(中国)</span>
-                                                <span class="iconfont icon-iconfontjiantou
-                    "></span>
-                                            </div>
-                                            <input class="input" type="text" placeholder="请输入手机号" name="phone">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="短信验证码">
-                                            <a href="" class="yanzhengma">获取验证码</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="密码" name="password">
-                                            <span class="iconfont icon-yanjing-guan
+                                        <input class="input" id="phone" type="text" placeholder="请输入手机号" name="phone">
 
-                    " style="padding-left: 70px;"></span>
-                                        </div>
+                                    </div>
+                                    <p class="warning-phone display" style="width:442px;line-height:20px;color: #fa2a2d;font-size: 14px;overflow: hidden;">
+                                        <span class="iconfont icon-iconfontgantanhao" style="padding:3px 6px 10px;"></span><span>手机号不正确</span>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="确认密码" name="password">
-                                            <span class="iconfont icon-yanjing-guan
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="text " placeholder="短信验证码 ">
+                                        <a href=" " class="yanzhengma ">获取验证码</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="position: relative;" class="mima0">
+                                        <input type="password" id="password" placeholder="密码 " name="password ">
+                                        <span class="iconfont icon-yanjing-guan " style="padding-left: 70px; "></span>
+                                        <div class="waring-pwd display">
+                                            <p class="til" style="margin-bottom: 8px;font-size: 14px;color: #333;">密码需满足以下要求</p>
+                                            <p style="font-size: 13px;line-height: 1.3;color: #666;">
+                                                <span class="iconfont icon-gou-kong"></span>
+                                                <span>至少8个字符</span>
+                                            </p>
+                                            <p style="color: rgba(0,0,0,.5);font-size: 13px;line-height: 1.3;">
+                                                <span class="iconfont icon-gou-kong"></span>
+                                                <span>至少含字母和数字，不能包含空格</span>
+                                            </p>
+                                            <p style="margin-top: 16px;color: #666!important;">密码强度：</p>
+                                            <p style="width: 100%;height: 3px;background-color: #999;font-size: 13px;    color: #666!important;margin: 8px 0;"></p>
+                                            <p>勿使用其他账号的密码</p>
+                                        </div>
+                                    </div>
 
-                    " style="padding-left: 70px;"></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div style="position: relative;">
-                                            <input type="text" placeholder="出生日期" name="birth">
-                                            <span class="iconfont icon-iconfontgantanhao" style="position: absolute;top: -1px;right: -37px;"></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="register" type="submit" value="注册">
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mima1">
+                                        <input type="password" id="password2 " placeholder="确认密码 " name="pwd">
+                                        <span class="iconfont icon-yanjing-guan " style="padding-left: 70px; "></span>
+                                    </div>
+                                    <p class="warning-cor display" style="width:442px;line-height:20px;color: #fa2a2d;font-size: 14px;overflow: hidden;">
+                                        <span class="iconfont icon-iconfontgantanhao" style="padding:3px 6px 10px;"></span><span>密码与确认密码不一致</span>
+
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="position: relative; ">
+                                        <input type="text" placeholder="出生日期 " name="birth" style="    background-color: rgba(0, 0, 0, 0);">
+                                        <span class="iconfont icon-iconfontgantanhao " style="position: absolute;top: -1px;right: -37px; "></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="register" type="submit" value="注册 ">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </li>
+            <li class="lis youxiang-li display">
+                <div class="left ">
+                    <div class="shouji divs " style="background: white; ">
+                        <span class="iconfont icon-shouji " style="font-size: 1.4em;margin:0 8px 0 14px; "></span>
+                        <span>手机号注册</span>
                     </div>
-                </li>
-                <li class="lis display youxiang-li">
-                    <div class="left">
-                        <div class="shouji divs" style="background: white;">
-                            <span class="iconfont icon-shouji
-            " style="font-size: 1.4em;margin:0 8px 0 14px;"></span>
-                            <span>手机号注册</span>
-                        </div>
-                        <div class="youxiang divs" style="background: rgba(0,0,0,.05);">
-                            <span class="iconfont icon-youxiang
-            " style="font-size: 1.4em;margin:0 8px 0 14px;"></span>
-                            <span>邮箱地址注册</span>
-                        </div>
+                    <div class="youxiang divs " style="background: rgba(0,0,0,.05); ">
+                        <span class="iconfont icon-youxiang " style="font-size: 1.4em;margin:0 8px 0 14px; "></span>
+                        <span>邮箱地址注册</span>
                     </div>
-                    <div class="right">
-                        <div class="til">华为帐号注册</div>
-                        <div class="det">
-                            <span>已有账号,&nbsp;</span>
-                            <span><a href="javascript:;"> &nbsp;去登录></a> </span>
-                        </div>
-                        <form action="../../interface/template/reg-email.php" method="POST">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="row1">
-                                            <span style="float: left;">国家/地区</span>
-                                            <span class="iconfont icon-iconfontjiantou
-            " style="float: right;"></span>
-                                            <span style="float: right;">中国</span>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="邮件地址" name="email">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="短信验证码">
-                                            <a href="" class="yanzhengma">获取验证码</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="密码" name="password">
-                                            <span class="iconfont icon-yanjing-guan
-
-            " style="padding-left: 70px;"></span>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="确认密码" name="password">
-                                            <span class="iconfont icon-yanjing-guan" style="padding-left: 70px;"></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <input type="text" placeholder="出生日期" name="birth">
-                                            <span class="iconfont icon-iconfontgantanhao" style="position: absolute;top: -1px;right: -37px;"></span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input class="register btn" type="submit" value="注册">
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>
-
-
+                </div>
+                <div class="right ">
+                    <div class="til ">华为帐号注册</div>
+                    <div class="det ">
+                        <span>已有账号,&nbsp;</span>
+                        <span><a href="javascript:; "> &nbsp;去登录></a> </span>
                     </div>
+                    <form action="../../interface/template/reg-email.php " method="POST ">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="row1 ">
+                                        <span style="float: left; ">国家/地区</span>
+                                        <span class="iconfont icon-iconfontjiantou " style="float: right; "></span>
+                                        <span style="float: right; ">中国</span>
 
-                </li>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="text " id="email " placeholder="邮件地址 " name="email">
+                                        <p class="warning-email display" style="width:442px;line-height:20px;color: #fa2a2d;font-size: 14px;overflow: hidden;">
+                                            <span class="iconfont icon-iconfontgantanhao" style="padding:3px 6px 10px;"></span><span>邮箱地址不正确</span>
 
-            </ul>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="text " placeholder="短信验证码 ">
+                                        <a href=" " class="yanzhengma ">获取验证码</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="position: relative;" class="mima2">
+                                        <input type="password" id="password3" placeholder="密码" name="password">
+                                        <span class="iconfont icon-yanjing-guan " style="padding-left: 70px; "></span>
+                                        <div class="waring-pwd2 display">
+                                            <p class="til" style="margin-bottom: 8px;font-size: 14px;color: #333;">密码需满足以下要求</p>
+                                            <p style="font-size: 13px;line-height: 1.3;color: #666;">
+                                                <span class="iconfont icon-gou-kong"></span>
+                                                <span>至少8个字符</span>
+                                            </p>
+                                            <p style="color: rgba(0,0,0,.5);font-size: 13px;line-height: 1.3;">
+                                                <span class="iconfont icon-gou-kong"></span>
+                                                <span>至少含字母和数字，不能包含空格</span>
+                                            </p>
+                                            <p style="margin-top: 16px;color: #666!important;">密码强度：</p>
+                                            <p style="width: 100%;height: 3px;background-color: #999;font-size: 13px;    color: #666!important;margin: 8px 0;"></p>
+                                            <p>勿使用其他账号的密码</p>
 
-            <!-- <div id="showImg"></div> -->
-        </div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <div class="mima3">
+                                        <input type="password" id="password4 " placeholder="确认密码 " name="pwd">
+                                        <span class="iconfont icon-yanjing-guan " style="padding-left: 70px; "></span>
+                                    </div>
+                                    <p class="warning-cor2 display" style="width:442px;line-height:20px;color: #fa2a2d;font-size: 14px;overflow: hidden;">
+                                        <span class="iconfont icon-iconfontgantanhao" style="padding:3px 6px 10px;"></span><span>密码与确认密码不一致</span>
+
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input type="text " id="birth" placeholder="出生日期 " name="birth">
+                                        <span class="iconfont icon-iconfontgantanhao " style="position: absolute;top: -1px;right: -37px; "></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="register" type="submit" value="注册 ">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+
+                </div>
+
+            </li>
+
+        </ul>
+
+
 
 
 
@@ -219,14 +255,14 @@
 
 
     <footer>
-        <div class="footer-c">
-            <div class="top">
-                <a href="javascript:;">华为帐号用户协议</a>
-                <a href="javascript:;">关于华为帐号与隐私的声明</a>
-                <a href="javascript:;">常见问题</a>
-                <a href="javascript:;">Cookies</a>
+        <div class="footer-c ">
+            <div class="top ">
+                <a href="javascript:; ">华为帐号用户协议</a>
+                <a href="javascript:; ">关于华为帐号与隐私的声明</a>
+                <a href="javascript:; ">常见问题</a>
+                <a href="javascript:; ">Cookies</a>
             </div>
-            <div class="bot">
+            <div class="bot ">
                 华为帐号 版权所有 © 2011-2021
             </div>
         </div>

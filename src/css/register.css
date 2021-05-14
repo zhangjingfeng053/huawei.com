@@ -19,6 +19,7 @@ li {
 }
 .display {
   display: none;
+  background-color: ;
 }
 header {
   height: 48px;
@@ -37,17 +38,32 @@ header > .header-c > .logo {
   width: 108px;
   margin-top: 12px;
 }
-.center {
-  width: 1200px;
-  height: 746px;
-  margin: auto;
+input {
+  outline: none;
+  background: rgba(0, 0, 0, 0.05);
 }
-.center > div .lis > .left {
+.center {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+}
+.center > #list {
+  width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+.center > #list > .lis {
+  margin: auto;
+  width: 1200px;
+  overflow: hidden;
+}
+.center > #list > .lis > .left {
   float: left;
   margin-top: 40px;
   width: 240px;
 }
-.center > div .lis > .left > .shouji {
+.center > #list > .lis > .left > .shouji {
   background: rgba(0, 0, 0, 0.05);
   padding: 16px;
   border-radius: 8px;
@@ -56,7 +72,7 @@ header > .header-c > .logo {
   display: flex;
   align-items: center;
 }
-.center > div .lis > .left > .youxiang {
+.center > #list > .lis > .left > .youxiang {
   padding: 16px;
   border-radius: 8px;
   cursor: pointer!important;
@@ -64,39 +80,39 @@ header > .header-c > .logo {
   display: flex;
   align-items: center;
 }
-.center > div .lis > .left > div:hover {
+.center > #list > .lis > .left > div:hover {
   background-color: rgba(0, 125, 255, 0.1);
 }
-.center > div .lis > .right {
+.center > #list > .lis > .right {
   color: #191919;
-  float: left;
-  width: 960px;
+  float: right;
+  width: 956px;
   padding: 69px 260px 38px 135px;
   background: #fff;
   font-size: 14px;
 }
-.center > div .lis > .right > .til {
+.center > #list > .lis > .right > .til {
   font-size: 32px;
   text-align: center;
   width: 442px;
 }
-.center > div .lis > .right > .det {
+.center > #list > .lis > .right > .det {
   width: 442px;
   font-size: 18px;
   text-align: center;
   margin-top: 5px;
 }
-.center > div .lis > .right > .det :nth-child(2) > a {
+.center > #list > .lis > .right > .det :nth-child(2) > a {
   color: #007dff;
 }
-.center > div .lis > .right > form > table {
+.center > #list > .lis > .right > form > table {
   margin-top: 35px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td {
+.center > #list > .lis > .right > form > table > tbody > tr > td {
   width: 442px;
   height: 50px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div {
   padding: 0 16px;
   margin-top: 20px;
   background: rgba(0, 0, 0, 0.05);
@@ -106,14 +122,14 @@ header > .header-c > .logo {
   width: 100%;
   line-height: 48px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div > .left {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div > .left {
   float: left;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div > .left :nth-child(2) {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div > .left :nth-child(2) {
   border-right: 1px solid #ddd;
   padding-right: 16px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div > .input {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div > .input {
   border: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 14px;
@@ -121,7 +137,7 @@ header > .header-c > .logo {
   width: 208px;
   padding-left: 24px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div > input {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div > input {
   width: 322px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
@@ -129,7 +145,7 @@ header > .header-c > .logo {
   border: none;
   float: left;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > div > .yanzhengma {
+.center > #list > .lis > .right > form > table > tbody > tr > td > div > .yanzhengma {
   width: 86px;
   height: 48px;
   float: right;
@@ -137,7 +153,7 @@ header > .header-c > .logo {
   font-size: 14px;
   padding-left: 16px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > .register {
+.center > #list > .lis > .right > form > table > tbody > tr > td > .register {
   border-radius: 8px;
   background: #007dff;
   border: 1px solid #ccc;
@@ -145,13 +161,37 @@ header > .header-c > .logo {
   font-size: 18px;
   font-weight: 400;
   opacity: 0.38 !important;
-  margin: 57px auto 0;
+  margin: 57px 64px 0;
   text-align: center;
   color: white;
   line-height: 48px;
 }
-.center > div .lis > .right > form > table > tbody > tr > td > .btn {
+.center > #list > .lis > .right > form > table > tbody > tr > td > .btn {
   height: 48px!important;
+}
+.waring-pwd {
+  position: absolute;
+  top: -152px;
+  left: 16px;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+  line-height: 1;
+}
+.waring-pwd2 {
+  position: absolute;
+  top: -152px;
+  left: 16px;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+  line-height: 1;
 }
 footer {
   height: 110px;

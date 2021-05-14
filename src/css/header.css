@@ -71,7 +71,6 @@ li {
   display: block;
   height: 16px;
   width: 16px;
-  background: url(../src/images/c50a25ac2a82230b26d6b0c1f3a2453.png) -32px 0;
 }
 .header-c > .left > :last-child > .dropdown {
   box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
@@ -143,7 +142,6 @@ li {
   display: block;
   height: 16px;
   width: 16px;
-  background: url(../src/images/c50a25ac2a82230b26d6b0c1f3a2453.png) -32px 0;
 }
 .header-c > .right > :first-child > .dropdown {
   height: 222px;
