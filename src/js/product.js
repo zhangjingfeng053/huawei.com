@@ -2,7 +2,94 @@ import { $ } from './library/jquery.js';
 import { cookie } from './library/cookie.js';
 import { querystring } from './library/qs.js';
 
+let id = location.search.split('=')[1];
+// console.log(id);
+$.ajax({
+    type: "get",
+    url: "../../interface/template/getItem.php",
+    data: {
+        id: id
+    },
+    dataType: "json",
+    success: function(res) {
+        // console.log(res);
+        let picture = JSON.parse(res.picture);
+        // console.log(`../../src/${picture[0].src}`);
 
+        $('.pro-detail>big.img').attr('src', `../../src/${picture[0].src}`);
+
+        $('.showImg img:eq(0)').attr('src', `../../src/${picture[0].src}`);
+        $('.showImg img:eq(1)').attr('src', `../../src/${picture[1].src}`);
+        $('.showImg img:eq(2)').attr('src', `../../src/${picture[2].src}`);
+        $('.showImg img:eq(3)').attr('src', `../../src/${picture[3].src}`);
+        $('.showImg img:eq(4)').attr('src', `../../src/${picture[4].src}`);
+        $('.showImg img:eq(5)').attr('src', `../../src/${picture[3].src}`);
+        $('.showImg img:eq(6)').attr('src', `../../src/${picture[3].src}`);
+
+        $('.list>img:eq(0)').attr('src', `../../src/${picture[0].src}`);
+        $('.list>img:eq(1)').attr('src', `../../src/${picture[1].src}`);
+        $('.list>img:eq(2)').attr('src', `../../src/${picture[2].src}`);
+        $('.list>img:eq(3)').attr('src', `../../src/${picture[3].src}`);
+        $('.list>img:eq(4)').attr('src', `../../src/${picture[4].src}`);
+        $('.list>img:eq(5)').attr('src', `../../src/${picture[3].src}`);
+        $('.list>img:eq(6)').attr('src', `../../src/${picture[3].src}`);
+
+
+        $('h1').html(res.bigTil);
+
+        $('.new-pri').html(res.price);
+
+        $('.new-pic').attr('src', `../../src/${picture[0].src}`);
+
+        //购物车数量样式
+        let temp1 = `
+        <input type="number" style="font-size: 18px;line-height: 40px;width: 63px;padding-left: 10px;" value="1" max="${res.number}  class="num"">
+        `;
+
+        $('.add').append(temp1);
+
+        //加入购物车
+        $('.right-bottom>div>#gouwuche').on('click', function() {
+            addTtem(res.id, res.price, $('.add>input').val());
+        });
+
+
+    }
+
+});
+
+function addTtem(id, price, number) {
+    let shop = cookie.get('shop');
+    let product = {
+            id,
+            price,
+            number
+        }
+        // console.log(product);
+
+    //判断当前cookie中是否有购物数据
+
+    if (shop) { //如果有数据，取出一个字符串
+        shop = JSON.parse(shop);
+
+        // 添加之前先要判断数据中有没有该商品
+        if (shop.some(el => el.id === id)) {
+            let _index = shop.findIndex(elm => elm.id == id);
+            let count = parseInt(shop[_index].number);
+            count += parseInt(number);
+            shop[_index].number = count;
+        } else {
+            shop.push(product);
+        }
+
+    } else { // 第一次没有数据的情况 创建一个新数据
+        shop = [];
+        shop.push(product);
+    }
+
+    cookie.set('shop', JSON.stringify(shop), 1);
+
+}
 
 $('.slider #top').on('click', function() {
     // let id = $(this).attr('data-title'); //点击哪个a标签就获取它的data-title属性的属性值

@@ -442,20 +442,18 @@ a:hover {
   height: 604px;
   margin: auto;
 }
-.center > .row5 > ul {
-  overflow: hidden;
+.center > .row5 > :nth-child(5) {
+  margin-left: 0 !important;
 }
-.center > .row5 > ul > li {
-  float: left;
-  overflow: hidden;
-}
-.center > .row5 > ul > li > img {
+.center > .row5 > .first {
   border-radius: 10px;
   cursor: pointer;
   width: 472px;
   height: 290px;
+  float: left;
 }
-.center > .row5 > ul > li > .box {
+.center > .row5 > .box {
+  float: left;
   margin-left: 12px;
   background: #f9f9f9;
   width: 230px;
@@ -464,22 +462,22 @@ a:hover {
   cursor: pointer;
   text-align: center;
 }
-.center > .row5 > ul > li > .box > a > .img > img {
+.center > .row5 > .box > a > .img > img {
   margin: 40px 40px 0;
   width: 150px;
   height: 150px;
 }
-.center > .row5 > ul > li > .box > a > .til {
+.center > .row5 > .box > a > .til {
   font-size: 14px;
   color: #3a3a3a;
   margin-top: 12px;
 }
-.center > .row5 > ul > li > .box > a > .del {
+.center > .row5 > .box > a > .del {
   color: #777;
   font-size: 12px;
   margin: 2px 0 7px;
 }
-.center > .row5 > ul > li > .box > a > .pri {
+.center > .row5 > .box > a > .pri {
   font-size: 14px;
   color: #d0021b;
 }

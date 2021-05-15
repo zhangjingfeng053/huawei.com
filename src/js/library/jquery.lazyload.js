@@ -12,7 +12,9 @@
  * Version:  1.9.3
  *
  */
-// import { $ } from './jquery.js';
+
+import { $ } from './jquery.js'
+
 (function($, window, document, undefined) {
     var $window = $(window);
 

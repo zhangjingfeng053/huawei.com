@@ -1,35 +1,43 @@
 import { $ } from './library/jquery.js';
 import { cookie } from './library/cookie.js';
 import { querystring } from './library/qs.js';
+import './library/jquery.lazyload.js';
 
 $.ajax({
     type: "get",
     url: "../../interface/template/getData.php",
     dataType: "json",
     success: function(res) {
-        // console.log(res);
+        console.log(res);
         let temp = '';
 
         res.forEach((elm, i) => {
             let picture = JSON.parse(elm.picture);
-            console.log(picture);
+            // console.log(picture);
 
-            temp += `<li>
+            temp += `
             <div class="box" style="margin-bottom: 10px;">
-                <a href="product.html">
+                <a href="./product.html?id=${elm.id}">
                     <div class="img">
-                        <img class="lazy" data-original="../images/row5-1-2.png" alt="">
+                        <img class="lazy" data-original="../${picture[0].src}" alt="">
                     </div>
-                    <div class="til">${elm.tittle}</div>
-                    <div class="del">${elm.del}</div>
+                    <div class="til">${elm.title}</div>
+                    <div class="del">${elm.details}</div>
                     <div class="pri">￥${elm.price}</div>
                 </a>
             </div>
 
-        </li>`;
-        })
+        `;
+
+        });
+        $('.row5').append(temp);
+        $(function() {
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
+        });
     }
-})
+});
 
 
 $('.swap').html($('.news_li').html());

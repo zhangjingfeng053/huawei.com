@@ -475,19 +475,18 @@ a:hover{
         width: 1200px;
         height: 604px;
         margin: auto;
-        >ul{
-            overflow: hidden;
-            >li{
-                float: left;
-                overflow: hidden;
-                >img{
-                    border-radius: 10px;
-                    cursor: pointer;
-                    width: 472px;
-                    height: 290px;
-                    }
-                >.box{
-                        
+        >:nth-child(5){
+            margin-left:0 !important;
+        }
+        >.first{
+            border-radius: 10px;
+            cursor: pointer;
+            width: 472px;
+            height: 290px;
+            float: left;
+            }
+         >.box{
+                    float: left;
                     margin-left: 12px;
                     background: #f9f9f9;
                     width: 230px;
@@ -518,8 +517,8 @@ a:hover{
                     }
                         
                     }
-            }
-        }
+            
+        
         
     }
 }
